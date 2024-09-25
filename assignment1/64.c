@@ -1,15 +1,16 @@
 #include<stdio.h>
 int main(){
-    int a[3][3],sum;
+    int a[3][3],sum[3],y;
     printf("enter the values: ");
     for(int i = 0;i<3;i++){
-        sum = 0;
+        y = 0;
         for(int j =0;j<3;j++){
             scanf("%d",&a[i][j]);
-            sum+=a[i][j];
+            y+=a[i][j];
         }
-        printf("sum for row%d is %d\n",i+1,sum);
+        sum[i] = y;
     }
-    
-    
+    for(int i = 0;i<3;i++){
+        printf("sum of row%d is %d",i,sum[i]);
+    }
 }
